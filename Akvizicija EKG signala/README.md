@@ -138,6 +138,8 @@ Više o notch filtrima sa operacionm pojačavačima se može pogledati [ovdje](h
 
 ![image](https://user-images.githubusercontent.com/122922214/226149616-b026f375-6dfa-40d4-ac1e-95e3e29e2e27.png)
 
+Lako je vidjeti da je notch filtar izbacio frekvencijsku komponenteu na 50Hz.
+
 RLD kolo
 
 ![image](https://user-images.githubusercontent.com/122922214/226150281-ceb747d4-92b8-4a42-bdeb-168ffd08e751.png)
