@@ -1,0 +1,169 @@
+Circuit: * C:\Users\Damjan\Desktop\Biomedicinska_elektronika\Biomedicinska_elektronika\Akvizicija EKG signala\LTspice simulacija\Akvizicija EKG signala.asc
+
+V2: Removing PWL point (0.47,0)
+V2: Removing PWL point (0.83,0)
+V2: Removing PWL point (1.47,0)
+V2: Removing PWL point (1.83,0)
+V2: Removing PWL point (2.47,0)
+V2: Removing PWL point (2.83,0)
+WARNING: Less than two connections to node NC_01.  This node is used by R28.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+Gmin = 0.000223007
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 0.000195179
+vernier = 0.015625
+vernier = 0.0208333
+Gmin = 0.000187964
+vernier = 0.0277778
+Gmin = 0.000176611
+vernier = 0.037037
+vernier = 0.0493827
+Gmin = 0.000159106
+vernier = 0.0658435
+vernier = 0.0877914
+Gmin = 0.000134781
+vernier = 0.117055
+Gmin = 0.000103933
+vernier = 0.156073
+vernier = 0.208098
+Gmin = 6.74388e-005
+vernier = 0.277464
+vernier = 0.138732
+Gmin = 4.21133e-005
+vernier = 0.0693659
+vernier = 0.034683
+vernier = 0.046244
+Gmin = 4.07845e-005
+vernier = 0.0616586
+Gmin = 3.55358e-005
+vernier = 0.0822114
+vernier = 0.109615
+Gmin = 2.82285e-005
+vernier = 0.0548076
+vernier = 0.0730768
+Gmin = 2.52016e-005
+vernier = 0.0974357
+vernier = 0.129914
+Gmin = 1.97346e-005
+vernier = 0.173219
+Gmin = 1.34659e-005
+vernier = 0.230959
+vernier = 0.307945
+vernier = 0.153972
+Gmin = 8.59706e-006
+vernier = 0.0769862
+vernier = 0.102648
+Gmin = 7.24338e-006
+vernier = 0.136864
+vernier = 0.182486
+Gmin = 5.2467e-006
+vernier = 0.243314
+Gmin = 3.12455e-006
+vernier = 0.324419
+vernier = 0.432558
+Gmin = 1.35567e-006
+vernier = 0.576744
+vernier = 0.768992
+Gmin = 3.72412e-007
+vernier = 0.384496
+vernier = 0.192248
+vernier = 0.096124
+vernier = 0.048062
+vernier = 0.024031
+vernier = 0.0120155
+vernier = 0.00600775
+vernier = 0.00300387
+Gmin = 3.12361e-007
+vernier = 0.00150194
+vernier = 0.000750968
+vernier = 0.000563226
+vernier = 0.00042242
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 88.6364%
+vernier = 0.0625
+Source Step = 87.8995%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 88.6364%
+vernier = 0.0625
+Source stepping failed
+
+Pseudo transient terminated at 102.327 s, solution accepted ready or not!
+Heightened Def Con from 0.0237082 +++++++++++++++++++++++++++++++to 0.0237082
+Heightened Def Con from 0.0637044 to 0.0637044
+Heightened Def Con from 0.12368 +++++++++++++++++++++++++++++++to 0.12368
+Heightened Def Con from 0.20372 to 0.20372
+Heightened Def Con from 0.323718 +++++++++++++++++++++++++++++to 0.323718
+Heightened Def Con from 0.343731 to 0.343731
+Heightened Def Con from 0.351257 to 0.351257
+Heightened Def Con from 0.363732 to 0.363732
+Heightened Def Con from 0.403699 +++++++++++++++++++++++++++++++to 0.403699
+Heightened Def Con from 0.443721 to 0.443721
+Heightened Def Con from 0.463736 to 0.463736
+Heightened Def Con from 0.523704 +++++++++++++++++++++++++++++++to 0.523704
+Heightened Def Con from 0.563733 to 0.563733
+Heightened Def Con from 0.583714 +++++++++++++++++++++++++++++++to 0.583714
+Heightened Def Con from 0.583714 to 0.583714
+Heightened Def Con from 0.603704 +++++++++++++++++++++++++++++++to 0.603704
+Heightened Def Con from 0.623714 to 0.623714
+Heightened Def Con from 0.663719 to 0.663719
+Heightened Def Con from 0.803689 +++++++++++++++++++++++++++++to 0.803689
+Heightened Def Con from 0.943745 to 0.943745
+Heightened Def Con from 0.96374 to 0.96374
+Heightened Def Con from 0.983745 to 0.983745
+Heightened Def Con from 1.08371 to 1.08371
+Heightened Def Con from 1.18371 +++++++++++++++++++++++++++++++to 1.18371
+Heightened Def Con from 1.20371 to 1.20371
+Heightened Def Con from 1.32369 +++++++++++++++++++++++++++++++to 1.32369
+Heightened Def Con from 1.32369 to 1.32369
+Heightened Def Con from 1.3437 +++++++++++++++++++++++++++++++to 1.3437
+Heightened Def Con from 1.3437 to 1.3437
+Heightened Def Con from 1.35125 to 1.35125
+Heightened Def Con from 1.40371 +++++++++++++++++++++++++++++to 1.40371
+Heightened Def Con from 1.4837 +++++++++++++++++++++++++++++++to 1.4837
+Heightened Def Con from 1.50372 +++++++++++++++++++++++++++++++to 1.50372
+Heightened Def Con from 1.60372 to 1.60372
+Heightened Def Con from 1.6437 +++++++++++++++++++++++++++++++to 1.6437
+Heightened Def Con from 1.66371 to 1.66371
+Heightened Def Con from 1.78371 +++++++++++++++++++++++++++++to 1.78371
+Heightened Def Con from 1.8037 +++++++++++++++++++++++++++++to 1.8037
+Heightened Def Con from 1.82371 to 1.82371
+Heightened Def Con from 1.92372 +++++++++++++++++++++++++++++++to 1.92372
+Heightened Def Con from 1.96372 +++++++++++++++++++++++++++++++to 1.96372
+
+Date: Sun Mar 19 10:47:34 2023
+Total elapsed time: 85.061 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 389285
+traniter = 364915
+tranpoints = 78038
+accept = 51887
+rejected = 27221
+matrix size = 1091
+fillins = 1957
+solver = Normal
+Thread vector: 213.4/141.0[4] 19.7/12.3[4] 17.7/9.3[4] 10.5/6.6[3]  2592/500
+Matrix Compiler1: 167.15 KB object code size  117.7/41.9/[18.6]
+Matrix Compiler2: 124.42 KB object code size  28.3/34.9/[15.4]
+
