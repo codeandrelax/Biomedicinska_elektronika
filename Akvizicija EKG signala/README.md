@@ -145,9 +145,3 @@ RLD kolo
 ![image](https://user-images.githubusercontent.com/122922214/226150281-ceb747d4-92b8-4a42-bdeb-168ffd08e751.png)
 
 
-
-
-
-![image](https://user-images.githubusercontent.com/122922214/226148215-beee8d74-7d46-409f-8fde-6e9d0344e173.png)
-
-
