@@ -140,8 +140,51 @@ Više o notch filtrima sa operacionm pojačavačima se može pogledati [ovdje](h
 
 Lako je vidjeti da je notch filtar izbacio frekvencijsku komponenteu na 50Hz.
 
-RLD kolo
+ Da bi se smanjilo štetno dejstvo zajedničkog signala uvodi se RLD kolo koje ima funkciju generisanja istog naponskog nivoa na kojem se nalaze oba signala, ali sa negativnim predznakom. Takav napon se dovodi na pacijenta i trebao bi da poništi ili barem umanji zajednički signal koji se dobija na ostalim elektrodama.
 
-![image](https://user-images.githubusercontent.com/122922214/226150281-ceb747d4-92b8-4a42-bdeb-168ffd08e751.png)
+![image](https://user-images.githubusercontent.com/122922214/226165408-176c8224-f110-43f1-afc8-c7ca6fecdc36.png)
+
+Sada se model EKGa mijenja tako što se dodaje sabirač tako da se izlaz sa RLD kola i interferencija sabiraju. Pošto su ta dva signala fazno različita za 180 stepeni, oni bi u zbiru trebali da budu 0.
+
+![image](https://user-images.githubusercontent.com/122922214/226165488-000c0d1a-36d1-4968-ac1a-ea44cc8e26e6.png)
+
+Na sljedećoj slici, zelenom bojom je prikazan signal interferencije, a plavom bojom izlaz sa RLD kola.
+![image](https://user-images.githubusercontent.com/122922214/226165577-6260b89f-4caf-45ac-b61a-b32d07768a56.png)
+Kada se uvede RLD kolo, izlaz sa instrumentacionog pojačavača je dat sljedećom slikom:
+
+![image](https://user-images.githubusercontent.com/122922214/226165624-5bca0159-c8ad-4fe9-be8b-8adca4e4d16c.png)
+
+Primjećuje se da je interferencija na 50Hz sada značajno manja, ali je i dalje vidljiva. Nakon prolaska signala kroz notch filtar, interferencija na 50Hz je sada potpuno izbačena.
+
+Korisni signal EKG se nalazi u opsegu od 0.1 Hz do ~300 Hz i zbog toga se signal propušta kroz filtar niskopropusnik opsega sa graničnom frekvencijom 300 Hz.
+Na sljedećoj slici je prikazan niskopropusni filtar drugog stepena napravljen sa operacionim pojačavačima (filtar može biti i prvog stepena). Više o filtrima niskopropusnicima opsega se može pogledati [ovdje](https://www.electronics-tutorials.ws/filter/filter_5.html).
+![image](https://user-images.githubusercontent.com/122922214/226165988-84755551-eac8-4a7f-b3fc-04963077713b.png)
+
+U simluaciji je to:
+
+![image](https://user-images.githubusercontent.com/122922214/226166198-7e4d7a57-1cab-43d6-baeb-97ad46b45335.png)
+
+
+Redoslijed filtara može biti i obrnut.
+Nakon ovakvog filtriranja signalu se dovodi offset oko kojeg će oscilovati, često je to 2.5V i vodi se na AD konvertor radi dalje obrade.
+
+Offset se lako ubacuje u filtar niskoporpusniik uvođenjem naponskke reference V7 čija vrijednost je 1V, ali može da se mijenja tako da dobijeni signal ne izlazi iz opsega napona koji se može mjeriti AD konvertorom.
+
+![image](https://user-images.githubusercontent.com/122922214/226166904-a3aae7ab-caaf-4306-9e51-aba9a57dd496.png)
+
+
+Čitav sistem sada izgleda:
+![image](https://user-images.githubusercontent.com/122922214/226166676-cad64f05-807c-4c3e-a32e-807ed00db60a.png)
+I na izlazu se dobija signal:
+![image](https://user-images.githubusercontent.com/122922214/226166695-c4f0ae55-7759-4a0f-baa3-68189a5dc52a.png)
+
+Kada se ubavci offset dobija se:
+![image](https://user-images.githubusercontent.com/122922214/226166944-07e601dc-e607-4848-b88b-1daf5703ddd1.png)
+
+
+# Grafički prikaz signala na računaru
+
+
+
 
 
