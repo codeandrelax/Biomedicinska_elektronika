@@ -80,3 +80,72 @@ Korisni signal je utopljen u smetnje, tj. signal sada ima "zajedničku komponent
 Potrebno je signal na elektrodama obraditi na odgovarajući način i iz njega izvći EKG signal.
 
 Za vježbu će se koristiti operacioni pojačavač LM358.
+U okviru LTspice paketa, učitava se opamp2.
+
+Prvi stepen u elektronici za obradu EKG signala je izrada instrumentacionog pojačavača.
+
+![image](https://user-images.githubusercontent.com/122922214/226147650-a68137b5-a875-4551-8f57-7526cef3369b.png)
+
+Jednačina koja diktira pojačanje ovog instrumentacionog pojačavača je $A = 1 + \frac{2 R}{R_{gain}}$
+
+Vrijednosti otpornika su postavljene tako da je pojačanje A=~1000.
+
+![image](https://user-images.githubusercontent.com/122922214/226147955-ce4529b9-70e3-4b64-9002-ae6627c6868d.png)
+
+Sada pokušaj simulacije rezultuje greškom "Unknown subcircuit called in: ...", to je zato što LTspice nema odgovarajući model za simulaciju operacionog pojačavača. Potrbno je preuzeti model operacionog pojačavača i podesiti LTspice da koristi taj model za operacione pojačavače.
+Na stranici [texas instrumentsa](https://www.ti.com/product/LM358?utm_source=google&utm_medium=cpc&utm_campaign=asc-null-null-GPN_EN-cpc-evm-google-wwe_cons&utm_content=LM358&ds_k=LM358&DCM=yes&gclid=Cj0KCQjwwtWgBhDhARIsAEMcxeDCo5SsxitMbWnbolcsEuEXkmDIFy4B5fyCtgZwcE3XQtHeY1FCJZgaAql6EALw_wcB&gclsrc=aw.ds) može se pronaći fajl potreban za simulaciju LM358 opearcionog pojačavača.
+
+![image](https://user-images.githubusercontent.com/122922214/226148061-5c0bd900-eb9c-4e16-90eb-b2ca11fec4bc.png)
+
+
+Preuzeti fajl po pritisku download dugmeta je u .zip formatu. Potrebno je raspaktovati taj fajl i u okvru raspakovanih fajlova od interesa je fajl pod nazivom "lmx58_lm2904.lib". Potrebno je otvoriti ovaj fajl u LTspice-u i sačuvati ga u radni direktorijum, tj. na isto mjesto gdje je LTspice schematic fajl sačuvan.
+
+![image](https://user-images.githubusercontent.com/122922214/226148157-8299d878-41bc-4137-a4fa-5522d07770e1.png)
+
+
+U okviru otvorenog fajla, ime podkomponente je dato u liniji .subckt
+
+![image](https://user-images.githubusercontent.com/122922214/226148181-5698a75d-dced-4f4b-bede-799b042f5afd.png)
+
+Desnim klikom na operacioni pojačavač u šemi prikazuju se njegove karakteristike, umjesto vrijednosti value na kojoj stoji "opamp2" unijeti ime podkomponente "LMX58_LM2904".
+Potrebno je dodati i LTspice direktivu .include lmx58_lm2904.lib tako što se pritisne taster S i zatim unese navedena komanda.
+![image](https://user-images.githubusercontent.com/122922214/226148377-272e4919-3b43-49b7-bf33-d06e8b5f05de.png)
+
+![image](https://user-images.githubusercontent.com/122922214/226148379-9a430448-9c32-4d1c-8c1c-77a4182ed6a2.png)
+
+Nakon što se sada pokrene simulacija, dobija se sljedeći dijagram:
+
+![image](https://user-images.githubusercontent.com/122922214/226148396-316a99d0-3648-4a9a-bf6d-7c73ef92cd82.png)
+
+
+Dijagram je okrenut jer su ulazne tačke suportne, tj. elektrode. Stoga, da bi se EKG signal vidio neizmjenjen potrebno je zamijeniti elektrode i ulaze.
+![image](https://user-images.githubusercontent.com/122922214/226148439-1d9ed6f3-04f8-40fe-bc43-8362f8f6bec8.png)
+
+
+Sada se dobija EKG sličan polaznom.
+
+![image](https://user-images.githubusercontent.com/122922214/226148493-cf0ce7af-2257-4c26-906e-4e07adeca087.png)
+
+Treba imati na umu da je korišteni operacioni pojačavač u simulaciji idelan i prema tome njegov CMRR faktor je beskonačan. Na ulaze operacionih pojačavača spajaju se otpornici vrijednosti 1 megaom radi simulacije ulazne otpornosti, a otpornicima od 50 kilooma se uvodi malo odstupanje od traženih vrijednosti što će dati sliku kakva se može očekivati u stvarnosti.
+
+![image](https://user-images.githubusercontent.com/122922214/226148697-ef21db19-502d-470e-983a-2d0fbcc9af64.png)
+ ![image](https://user-images.githubusercontent.com/122922214/226148705-1cefb79a-7f15-48c9-ad6b-7b7a9ca55c55.png)
+
+Primjećuje se da je interferencija od 50Hz veliki problem. Zbog toga se sada signal propušta kroz notch filter tako da se komponenta od 50Hz uklanja iz signala.
+Više o notch filtrima sa operacionm pojačavačima se može pogledati [ovdje](https://www.electronics-notes.com/articles/analogue_circuits/operational-amplifier-op-amp/notch-filter-active-circuit.php).
+
+![image](https://user-images.githubusercontent.com/122922214/226149489-15139c52-ccc8-4072-9809-7d1c2fd333eb.png)
+
+![image](https://user-images.githubusercontent.com/122922214/226149616-b026f375-6dfa-40d4-ac1e-95e3e29e2e27.png)
+
+RLD kolo
+
+![image](https://user-images.githubusercontent.com/122922214/226150281-ceb747d4-92b8-4a42-bdeb-168ffd08e751.png)
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/122922214/226148215-beee8d74-7d46-409f-8fde-6e9d0344e173.png)
+
+
